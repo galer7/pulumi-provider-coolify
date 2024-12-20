@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = ['RandomComponentArgs', 'RandomComponent']
@@ -82,7 +87,7 @@ class RandomComponent(pulumi.ComponentResource):
             __props__.__dict__["length"] = length
             __props__.__dict__["password"] = None
         super(RandomComponent, __self__).__init__(
-            'xyz:index:RandomComponent',
+            'coolify:index:RandomComponent',
             resource_name,
             __props__,
             opts,

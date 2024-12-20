@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = ['ProviderArgs', 'Provider']
@@ -39,7 +44,7 @@ class Provider(pulumi.ProviderResource):
                  itsasecret: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
-        Create a Xyz resource with the given unique name, props, and options.
+        Create a Coolify resource with the given unique name, props, and options.
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         """
@@ -50,7 +55,7 @@ class Provider(pulumi.ProviderResource):
                  args: Optional[ProviderArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Create a Xyz resource with the given unique name, props, and options.
+        Create a Coolify resource with the given unique name, props, and options.
         :param str resource_name: The name of the resource.
         :param ProviderArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -78,7 +83,7 @@ class Provider(pulumi.ProviderResource):
 
             __props__.__dict__["itsasecret"] = pulumi.Output.from_input(itsasecret).apply(pulumi.runtime.to_json) if itsasecret is not None else None
         super(Provider, __self__).__init__(
-            'xyz',
+            'coolify',
             resource_name,
             __props__,
             opts)
