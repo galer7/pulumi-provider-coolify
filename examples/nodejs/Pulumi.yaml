@@ -1,6 +1,6 @@
-name: provider-xyz-native
+name: provider-coolify-native
 runtime: nodejs
 plugins:
   providers:
-    - name: xyz
+    - name: coolify
       path: ../../bin

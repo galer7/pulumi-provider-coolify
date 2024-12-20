@@ -1,4 +1,4 @@
-module provider-xyz-native
+module provider-coolify-native
 
 go 1.20
 

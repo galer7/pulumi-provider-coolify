@@ -1,17 +1,17 @@
-name: provider-xyz-native
+name: provider-coolify-native
 runtime: yaml
 plugins:
   providers:
-    - name: xyz
+    - name: coolify
       path: ../../bin
 
 resources:
   myRandomResource:
-    type: xyz:Random
+    type: coolify:Random
     properties:
       length: 24
   myRandomComponent:
-    type: xyz:RandomComponent
+    type: coolify:RandomComponent
     properties:
       length: 24
 

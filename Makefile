@@ -1,10 +1,10 @@
-PROJECT_NAME := Pulumi Xyz Resource Provider
+PROJECT_NAME := Pulumi coolify Resource Provider
 
-PACK             := xyz
+PACK             := coolify
 PACKDIR          := sdk
-PROJECT          := github.com/pulumi/pulumi-xyz
-NODE_MODULE_NAME := @abc/xyz
-NUGET_PKG_NAME   := Abc.Xyz
+PROJECT          := github.com/galer7/pulumi-provider-coolify
+NODE_MODULE_NAME := @galer7/coolify
+NUGET_PKG_NAME   := galer7.coolify
 
 PROVIDER        := pulumi-resource-${PACK}
 VERSION         ?= $(shell pulumictl get version)
